@@ -156,8 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
-    <Content Include="App\gruntfile.js" />
-    <Content Include="App\usersChallenge.min.js" />
+    <Content Include="gruntfile.js" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="index.html" />
     <Content Include="App\UsersController.js" />

@@ -22,6 +22,7 @@ namespace UsersChallengeAPI
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            //Generates test data, otherwise the in-memory database would be empty when the application starts.
             GenerateDummyData();
         }
 

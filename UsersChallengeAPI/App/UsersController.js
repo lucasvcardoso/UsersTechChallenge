@@ -1,10 +1,12 @@
-﻿angular.module('UsersApp').controller("UsersController", ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
+﻿var myApp = angular.module('UsersApp');
+
+    myApp.controller("UsersController", ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
     $scope.ListOfUsers;
     $scope.Status;
 
-    $scope.Close = function () {
-        $location.path('/ListAllUsers')
-    }
+        $scope.Close = function () {
+            $location.path('/ListAllUsers')
+        };
 
     //Get all users and binds them with an HTML table
     $http.get("UsersChallenge.API/Users")
@@ -15,20 +17,20 @@
         });
 
    //Add new user
-    $scope.Add = function () {
-        var userData = {
-            UserId: $scope.UserId,
-            Name: $scope.Name,
-            Age: $scope.Age,
-            Address: $scope.Address
+        $scope.Add = function () {
+            var userData = {
+                UserId: $scope.UserId,
+                Name: $scope.Name,
+                Age: $scope.Age,
+                Address: $scope.Address
+            };
+            $http.post("UsersChallenge.API/Users", userData)
+                .then(function (data) {
+                    $location.path('/ListAllUsers')
+                }, function (data) {
+                    $scope.error = "Error adding new user: " + data.ExceptionMessage;
+                });
         };
-        $http.post("UsersChallenge.API/Users", userData)
-            .then(function (data) {
-                $location.path('/ListAllUsers')
-            }, function (data) {
-                $scope.error = "Error adding new user: " + data.ExceptionMessage;
-            });
-    }
         //Fill the user record for update
     if ($routeParams.userId) {
         $scope.UserId = $routeParams.userId
@@ -44,22 +46,22 @@
     
 
     //Update the user record
-    $scope.Update = function () {
-        var userData = {
-            UserId: $scope.UserId,
-            Name: $scope.Name,
-            Age: $scope.Age,
-            Address: $scope.Address
-        };
-        if ($scope.UserId > 0) {
+        $scope.Update = function () {
+            var userData = {
+                UserId: $scope.UserId,
+                Name: $scope.Name,
+                Age: $scope.Age,
+                Address: $scope.Address
+            };
+            if ($scope.UserId > 0) {
 
-            $http.put("UsersChallenge.API/Users", userData)
-                .then(function (data) {
-                    $location.path('UsersChallenge.API/ListAllUsers');
-                }, function (data) {
-                    console.log(data);
-                    $scope.error = "Error updating user: " + data.ExceptionMessage;
-                });
-        }
-    }
+                $http.put("UsersChallenge.API/Users", userData)
+                    .then(function (data) {
+                        $location.path('UsersChallenge.API/ListAllUsers');
+                    }, function (data) {
+                        console.log(data);
+                        $scope.error = "Error updating user: " + data.ExceptionMessage;
+                    });
+            }
+        };
 }]);
