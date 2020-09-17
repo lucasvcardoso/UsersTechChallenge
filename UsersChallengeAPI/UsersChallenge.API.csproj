@@ -156,6 +156,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\gruntfile.js" />
+    <Content Include="App\usersChallenge.min.js" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="index.html" />
     <Content Include="App\UsersController.js" />
@@ -956,6 +958,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="App\package-lock.json" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
