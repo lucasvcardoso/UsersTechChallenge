@@ -26,5 +26,5 @@
 	- Open Powershell or CMD as an Adminstrator
 	- Run the script called "UsersChallengeAPI.deploy.cmd"
 
-## Open a web browser and go to http://localhost ##
+### Open a web browser and go to http://localhost ###
 	
