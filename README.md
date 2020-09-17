@@ -2,12 +2,12 @@
 
 ## System Requirements to run the application: ##
 
-- .NET Framework 4.8 minimum required.
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) minimum required.
 
 - Windows must have installed:
-	- WebPlatformInstaller
-	- URL Rewrite Module 2
-	- Web Deploy
+	- [WebPlatformInstaller](https://www.microsoft.com/web/downloads/platform.aspx)
+	- [URL Rewrite Module 2](https://www.microsoft.com/en-us/download/details.aspx?id=7435)
+	- [Web Deploy](https://www.microsoft.com/en-us/download/details.aspx?id=43717)
 
 - IIS must be enabled in "Control Panel > Programs And Feaures > Turn Windows feature on or off" and have enabled the resources under:
 	- World Wide Web > Application Development Features > ASP.NET 4.8 
