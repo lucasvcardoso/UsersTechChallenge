@@ -1,6 +1,6 @@
 # UsersChallenge
 
-# System Requirements to run the application: #
+## System Requirements to run the application: ##
 
 - .NET Framework 4.8 minimum required.
 
@@ -20,11 +20,11 @@
 
 - IIS must have the Default Web Site created
 
-# Deployment of the application #
+## Deployment of the application ##
 - Download the UsersChallenge1.0.zip package
 	- Extract the deploy package to a folder on the Windows machine that will run the site
 	- Open Powershell or CMD as an Adminstrator
 	- Run the script called "UsersChallengeAPI.deploy.cmd"
 
-# Open a web browser and go to http://localhost # 
+## Open a web browser and go to http://localhost ##
 	
