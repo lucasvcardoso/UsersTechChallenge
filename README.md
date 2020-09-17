@@ -21,7 +21,7 @@
 - IIS must have the Default Web Site created
 
 ## Deployment of the application ##
-- Download the UsersChallenge1.0.zip package
+- Download the UsersChallenge1.0.zip package from [here](https://github.com/lucasvcardoso/UsersTechChallenge/releases/tag/1.0)
 	- Extract the deploy package to a folder on the Windows machine that will run the site
 	- Open Powershell or CMD as an Adminstrator
 	- Run the script called "UsersChallengeAPI.deploy.cmd"
