@@ -16,7 +16,7 @@ namespace UsersChallenge.Data.DAO
         {
             //In a production environment this instantiation
             //would instead be an object injected by the dependency injection framework
-            context = new UsersContext(connectionString);
+            context = new UsersContext(connectionString);           
         }
         public void Add(User user)
         {
