@@ -5,14 +5,14 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersChallenge.API", "UsersChallengeAPI\UsersChallenge.API.csproj", "{D8ACFC41-093B-4672-B280-D5F1BF9D626B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4DBB9C09-7736-4A9A-B2E1-172F46EF391F}"
-	ProjectSection(SolutionItems) = preProject
-		..\README.md = ..\README.md
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersChallenge.Data", "UsersChallenge.Data\UsersChallenge.Data.csproj", "{6C26942C-8A76-45F7-84E0-1A19DF7DF209}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersChallenge.Models", "UsersChallenge.Models\UsersChallenge.Models.csproj", "{CF2C3613-EE77-40AE-9AD4-2B60E390E38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CBE60A6-EB5B-4C03-B6B1-34E5499D6037}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

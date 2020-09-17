@@ -6,7 +6,9 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package-lock.json'),
         uglify: {
             options: {
-                mangle: true
+                mangle: true,
+                sourceMap: true,
+                sourceMapName: 'sourceMap.map'
             },
             build: {
                 src: ['App/app.js', 'App/UsersController.js'],
@@ -15,7 +17,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.file.delete('usersChallenge.min.js');
+    grunt.file.delete('App/usersChallenge.min.js');
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');

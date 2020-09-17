@@ -9,7 +9,7 @@
         };
 
     //Get all users and binds them with an HTML table
-    $http.get("UsersChallenge.API/Users")
+    $http.get("Users")
         .then(function (data) {
             $scope.ListOfUsers = data;
         }, function (data) {
@@ -24,7 +24,7 @@
                 Age: $scope.Age,
                 Address: $scope.Address
             };
-            $http.post("UsersChallenge.API/Users", userData)
+            $http.post("Users", userData)
                 .then(function (data) {
                     $location.path('/ListAllUsers')
                 }, function (data) {
@@ -35,7 +35,7 @@
     if ($routeParams.userId) {
         $scope.UserId = $routeParams.userId
 
-        $http.get('UsersChallenge.API/Users/' + $scope.UserId)
+        $http.get('Users/' + $scope.UserId)
             .then(function (data) {
                 $scope.UserId
                 $scope.Name = data.data.Name;
@@ -55,9 +55,9 @@
             };
             if ($scope.UserId > 0) {
 
-                $http.put("UsersChallenge.API/Users", userData)
+                $http.put("Users", userData)
                     .then(function (data) {
-                        $location.path('UsersChallenge.API/ListAllUsers');
+                        $location.path('/ListAllUsers');
                     }, function (data) {
                         console.log(data);
                         $scope.error = "Error updating user: " + data.ExceptionMessage;
